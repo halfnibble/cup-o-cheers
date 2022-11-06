@@ -9,13 +9,8 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className={styles.link}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <a className={styles.link} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Placeholder for Cup O' Cheers!
         </a>
       </header>
     </div>
