@@ -91,7 +91,7 @@ const App = () => {
       <Paper className={styles.AppContent}>
         <img src={logo} className={styles.logo} alt="logo" />
         <Typography sx={{ marginTop: "20px" }} variant={"h5"}>
-          Welcome to the temporary website for Cup O'Cheers!
+          Welcome to the future website of Cup O'Cheers!
         </Typography>
       </Paper>
     </Container>
