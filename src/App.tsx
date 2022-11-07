@@ -1,38 +1,45 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from 'react'
 
 // MUI Components
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import Drawer from "@mui/material/Drawer";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import Paper from "@mui/material/Paper";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Chip from '@mui/material/Chip'
+import Container from '@mui/material/Container'
+import Drawer from '@mui/material/Drawer'
+import Divider from '@mui/material/Divider'
+import Grid from '@mui/material/Grid'
+import IconButton from '@mui/material/IconButton'
+import Link from '@mui/material/Link'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import Paper from '@mui/material/Paper'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
 
 // MUI Icons
-import MenuIcon from "@mui/icons-material/Menu";
+import MenuIcon from '@mui/icons-material/Menu'
+import EmailIcon from '@mui/icons-material/Email'
+import CheckIcon from '@mui/icons-material/Check'
 
-import logo from "./logo.svg";
-import styles from "./App.module.scss";
+import Logo from './Logo'
+import Gallery from './Gallery'
+import styles from './App.module.sass'
 
 const App = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-  const containerRef = useRef(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
+  const containerRef = useRef(null)
 
   const handleDrawerToggle = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
 
   return (
     <Container ref={containerRef}>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: 'flex' }}>
         <AppBar component="nav">
           <Toolbar>
             <IconButton
@@ -40,20 +47,20 @@ const App = () => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ mr: 2, display: { sm: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
               Cup O'Cheers
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <Button key={"item1"} sx={{ color: "#fff" }}>
-                Item 1
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Button href="#contact-info" key={'item1'} sx={{ color: '#fff' }}>
+                Contact us
               </Button>
             </Box>
           </Toolbar>
@@ -68,19 +75,19 @@ const App = () => {
               keepMounted: true, // Better open performance on mobile.
             }}
             sx={{
-              display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": { boxSizing: "border-box", width: 240 },
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
             }}
           >
-            <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+            <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ my: 2 }}>
                 Cup O'Cheers
               </Typography>
               <Divider />
               <List>
-                <ListItem key={"item1"} disablePadding>
-                  <ListItemButton sx={{ textAlign: "center" }}>
-                    <ListItemText primary={"Item 1"} />
+                <ListItem key={'item1'} disablePadding>
+                  <ListItemButton href={'#contact-info'} sx={{ textAlign: 'center' }}>
+                    <ListItemText primary={'Contact us'} />
                   </ListItemButton>
                 </ListItem>
               </List>
@@ -89,13 +96,54 @@ const App = () => {
         </Box>
       </Box>
       <Paper className={styles.AppContent}>
-        <img src={logo} className={styles.logo} alt="logo" />
-        <Typography sx={{ marginTop: "20px" }} variant={"h5"}>
-          Welcome to the future website of Cup O'Cheers!
-        </Typography>
-      </Paper>
-    </Container>
-  );
-};
+        <Grid container direction="row" justifyContent="flex-start" alignItems="flex-start" spacing={3}>
+          <Grid item>
+            <Logo />
+          </Grid>
+          <Grid item>
+            <Typography variant={'h4'}>Welcome to Cup O'Cheers!</Typography>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Handmade in the USA'} />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Made of high quality Acrylic, Cotton, or Wool'} />
+              </ListItem>
+            </List>
+          </Grid>
+        </Grid>
 
-export default App;
+        <Divider sx={{ marginTop: '15px' }} />
+
+        <Gallery />
+
+        <Divider sx={{ marginTop: '15px' }} />
+
+        <Box id="contact-info" className={styles.Contact}>
+          <Typography variant={'h5'}>Contact us to place an order</Typography>
+          <Typography>
+            <Link sx={{ textDecoration: 'none' }} href="mailto:beelieveart@gmail.com?subject=Cozie order">
+              <Chip
+                className={styles.ContactChip}
+                icon={<EmailIcon />}
+                label="beelieveart@gmail.com"
+                variant="filled"
+                color={'secondary'}
+              />
+            </Link>
+          </Typography>
+        </Box>
+      </Paper>
+
+      <Box sx={{ height: '200px' }} />
+    </Container>
+  )
+}
+
+export default App
