@@ -101,7 +101,7 @@ const App = () => {
             <Logo />
           </Grid>
           <Grid item>
-            <Typography variant={'h4'}>Welcome to Cup O'Cheers!</Typography>
+            <Typography variant={'h4'}>Cup O'Cheers Cozies!</Typography>
             <List>
               <ListItem>
                 <ListItemIcon>
@@ -135,6 +135,7 @@ const App = () => {
                 label="beelieveart@gmail.com"
                 variant="filled"
                 color={'secondary'}
+                sx={{ fontSize: '1.2em' }}
               />
             </Link>
           </Typography>

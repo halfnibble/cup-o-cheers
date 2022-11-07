@@ -20,19 +20,38 @@ const imageList: IListItem[] = [
     listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_red_yarn_medium.jpeg',
     detailUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_red_yarn.jpeg',
   },
+  {
+    title: 'Aqua cozie',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_aqua.jpeg',
+  },
+  {
+    title: 'Blue cozie with gold frills',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_blue_gold_frills.jpeg',
+  },
+  {
+    title: 'Brown cozie',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_brown.jpeg',
+  },
+  {
+    title: 'Christmas red cozie with gold flecks',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_christmas_red.jpeg',
+  },
+  {
+    title: 'Light orange cozie',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_light_orange.jpeg',
+  },
+  {
+    title: 'Light violet cozie',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_light_violet.jpeg',
+  },
 ]
 
 const Gallery = () => {
   return (
-    <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+    <ImageList variant="masonry" cols={3} gap={8}>
       {imageList.map(item => (
         <ImageListItem key={item.listUrl}>
-          <img
-            src={item.listUrl}
-            srcSet={item.detailUrl ? item.detailUrl : item.listUrl}
-            alt={item.title}
-            loading="lazy"
-          />
+          <img src={item.listUrl} alt={item.title} loading="lazy" />
         </ImageListItem>
       ))}
     </ImageList>
