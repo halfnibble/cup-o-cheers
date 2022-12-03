@@ -48,7 +48,7 @@ const imageList: IListItem[] = [
 
 const Gallery = () => {
   return (
-    <ImageList variant="masonry" cols={3} gap={8}>
+    <ImageList cols={3} gap={8}>
       {imageList.map(item => (
         <ImageListItem key={item.listUrl}>
           <img src={item.listUrl} alt={item.title} loading="lazy" />

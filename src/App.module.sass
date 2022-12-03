@@ -1,11 +1,34 @@
 @import 'settings'
-  
+
 .App
   text-align: center
 
 .AppContent
   margin-top: 80px
   padding: 40px
+  @media screen and (max-width: $mobile)
+    margin-top: 60px
+    padding: 15px
+
+.AppContainer
+  @media screen and (max-width: $mobile)
+    justify-content: space-around !important
+
+.MenuTitle
+  @media screen and (max-width: $mobile)
+    padding-right: 48px
+    text-align: center
+
+.MenuIcon
+  width: 32px
+  height: 32px
+  margin-top: -2px
+  margin-bottom: -8px
+
+.PageTitle
+  @media screen and (max-width: $mobile)
+    font-size: 30px !important
+    text-align: center
 
 .ContactChip
   margin-top: 10px 

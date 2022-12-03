@@ -23,6 +23,30 @@ const pallette: ThemeOptions = {
       disabled: 'rgba(0, 0, 0, 0.5)',
     },
   },
+  typography: {
+    h1: {
+      fontFamily: "'PT Sans Caption', sans-serif",
+      fontWeight: 'bold',
+    },
+    h2: {
+      fontFamily: "'PT Sans Caption', sans-serif",
+      fontWeight: 'bold',
+    },
+    h3: {
+      fontFamily: "'PT Sans Caption', sans-serif",
+      fontWeight: 'bold',
+    },
+    h4: {
+      fontFamily: "'PT Sans Caption', sans-serif",
+    },
+    h5: {
+      fontFamily: "'PT Sans Caption', sans-serif",
+    },
+    h6: {
+      fontFamily: "'PT Sans Caption', sans-serif",
+      fontWeight: 'bold',
+    },
+  },
 }
 
 export default pallette

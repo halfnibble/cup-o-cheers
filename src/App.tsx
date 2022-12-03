@@ -23,7 +23,8 @@ import Typography from '@mui/material/Typography'
 // MUI Icons
 import MenuIcon from '@mui/icons-material/Menu'
 import EmailIcon from '@mui/icons-material/Email'
-import CheckIcon from '@mui/icons-material/Check'
+// import CheckIcon from '@mui/icons-material/Check'
+import AcUnitIcon from '@mui/icons-material/AcUnit'
 
 import Logo from './Logo'
 import Gallery from './Gallery'
@@ -51,11 +52,8 @@ const App = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} className={styles.MenuTitle}>
+              <img className={styles.MenuIcon} src="/favicon.ico" />
               Cup O'Cheers
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -81,6 +79,7 @@ const App = () => {
           >
             <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ my: 2 }}>
+                <img className={styles.MenuIcon} src="/favicon.ico" />
                 Cup O'Cheers
               </Typography>
               <Divider />
@@ -96,24 +95,39 @@ const App = () => {
         </Box>
       </Box>
       <Paper className={styles.AppContent}>
-        <Grid container direction="row" justifyContent="flex-start" alignItems="flex-start" spacing={3}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          spacing={3}
+          className={styles.AppContainer}
+        >
           <Grid item>
             <Logo />
           </Grid>
           <Grid item>
-            <Typography variant={'h4'}>Cup O'Cheers Cozies!</Typography>
-            <List>
+            <Typography variant={'h4'} className={styles.PageTitle}>
+              Cup O'Cheers Cozies
+            </Typography>
+            <List dense>
               <ListItem>
                 <ListItemIcon>
-                  <CheckIcon />
+                  <AcUnitIcon />
                 </ListItemIcon>
                 <ListItemText primary={'Handmade in the USA'} />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <CheckIcon />
+                  <AcUnitIcon />
                 </ListItemIcon>
                 <ListItemText primary={'Made of high quality Acrylic, Cotton, or Wool'} />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <AcUnitIcon />
+                </ListItemIcon>
+                <ListItemText primary={"Insulate your hand from your drink's temperature!"} />
               </ListItem>
             </List>
           </Grid>
