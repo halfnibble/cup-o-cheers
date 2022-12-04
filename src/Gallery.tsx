@@ -44,6 +44,10 @@ const imageList: IListItem[] = [
     title: 'Light violet cozie',
     listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_light_violet.jpeg',
   },
+  {
+    title: 'White with pink frills',
+    listUrl: 'https://cupocheers.s3.us-west-2.amazonaws.com/CupOCheers_white_pink_frills_medium.jpeg',
+  },
 ]
 
 const Gallery = () => {

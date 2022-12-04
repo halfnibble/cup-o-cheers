@@ -28,6 +28,8 @@ import AcUnitIcon from '@mui/icons-material/AcUnit'
 
 import Logo from './Logo'
 import Gallery from './Gallery'
+import logoHot from './cupocheers_logo_hot.svg'
+import logoIced from './cupocheers_logo_iced.svg'
 import styles from './App.module.sass'
 
 const App = () => {
@@ -53,7 +55,7 @@ const App = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} className={styles.MenuTitle}>
-              <img className={styles.MenuIcon} src="/favicon.ico" />
+              <img className={styles.MenuIcon} src={logoHot} />
               Cup O'Cheers
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -79,7 +81,7 @@ const App = () => {
           >
             <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ my: 2 }}>
-                <img className={styles.MenuIcon} src="/favicon.ico" />
+                <img className={styles.MenuIconTilt} src={logoIced} />
                 Cup O'Cheers
               </Typography>
               <Divider />
@@ -115,7 +117,7 @@ const App = () => {
                 <ListItemIcon>
                   <AcUnitIcon />
                 </ListItemIcon>
-                <ListItemText primary={'Handmade in the USA'} />
+                <ListItemText primary={'Keep your drink hot or iced and your hands cozy'} />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
@@ -127,7 +129,7 @@ const App = () => {
                 <ListItemIcon>
                   <AcUnitIcon />
                 </ListItemIcon>
-                <ListItemText primary={"Insulate your hand from your drink's temperature!"} />
+                <ListItemText primary={'Handmade in the USA'} />
               </ListItem>
             </List>
           </Grid>
