@@ -3,7 +3,7 @@
     <title>Text Only</title>
     <g id="Text-Only" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect id="Rectangle" stroke="#16155F" stroke-width="16" fill="#E1E7F3" stroke-linejoin="round" x="10" y="10" width="880" height="880" rx="16"></rect>
-        <text id="Cup-O’Cheers" font-family="PTSans-CaptionBold, PT Sans Caption" font-size="118" font-weight="bold" letter-spacing="2.01709402" fill="#12125F">
+        <text id="Cup-O’Cheers" font-family="PT Sans Caption" font-size="118" font-weight="bold" letter-spacing="2.01709402" fill="#12125F">
             <tspan x="65" y="806">Cup O’Cheers</tspan>
         </text>
     </g>

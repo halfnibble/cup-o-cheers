@@ -40,7 +40,10 @@ jobs:
       - name: Copy public files to dist/
         run: >
           cp public/favicon.ico dist/favicon.ico &&
-          cp public/robots.txt dist/robots.txt
+          cp public/robots.txt dist/robots.txt &&
+          cp public/manifest.json dist/manifest.json &&
+          cp public/logo192.png dist/logo192.png &&
+          cp public/logo512.png dist/logo512.png
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact

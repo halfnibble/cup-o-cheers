@@ -152,6 +152,7 @@ const App = () => {
                 variant="filled"
                 color={'secondary'}
                 sx={{ fontSize: '1.2em' }}
+                component={'span'}
               />
             </Link>
           </Typography>
